@@ -1,0 +1,33 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b71c1c; /* Dark red color */
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navItem {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .navItemActive {
+    background-color: #d32f2f; /* Red color */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  
