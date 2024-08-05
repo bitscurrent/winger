@@ -1,10 +1,10 @@
 
-import express, { Router, Request, Response } from "express";
+import express, { Router } from "express";
 import {
   loginUser,
-  logoutUser,
+  // logoutUser,
   registerUser,
-} from "../controllers/user.controller";
+} from "../controllers/user.controller.js";
 // import verifyJWT from "../middlewares/verifyJWT.middleware";
 
 const router = Router();
@@ -12,7 +12,7 @@ const router = Router();
 
 router.route("/login").post( loginUser);
 
-router.route("/logout").post( logoutUser);
+// router.route("/logout").post( logoutUser);
 
 router.route("/register").post( registerUser);
 
