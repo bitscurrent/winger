@@ -4,15 +4,23 @@ import Contact from "../pages/contact";
 import Footer from "../pages/footer";
 import Header from "../pages/header";
 import HomeComponent from "../pages/home";
+import HeroSection from "../pages/hero";
+import SeatReservation from "../pages/seatReservation";
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 export default function Home() {
   return (
-    <main>
+    <>
+
+    
+ 
      <Header />
-      <Contact />
-<HomeComponent />
-      <Footer />
-    </main>
-  
+    <HeroSection />
+    <SeatReservation />
+<Contact />
+<Footer />
+    </>
   );
 }
