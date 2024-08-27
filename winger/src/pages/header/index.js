@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './header.module.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -42,6 +44,19 @@ const Header = () => {
             <li><a href="#">404</a></li>
           </ul>
         </nav>
+
+
+        <div className="userIcon">
+          <Link href='/login'>
+          <i className="fa-solid fa-user"></i>
+
+          </Link>
+        </div>
+
+    
+
+
+
         <div className={styles.searchIcon}>
           <i className="fas fa-search"></i>
         </div>

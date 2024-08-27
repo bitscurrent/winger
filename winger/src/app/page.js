@@ -8,6 +8,7 @@ import HeroSection from "../pages/hero";
 import SeatReservation from "../pages/seatReservation";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Login from "../pages/login";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
     <SeatReservation />
 <Contact />
 <Footer />
+
     </>
   );
 }
