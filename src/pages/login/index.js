@@ -1,9 +1,9 @@
 
 
-"use client"; // This marks the component as a Client Component
+"use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Updated import
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import Cookies from 'js-cookie'; // Import js-cookie for managing cookies
 import styles from './Login.module.css'; // Import the CSS module
@@ -25,9 +25,9 @@ const Login = () => {
       const { token } = response.data;
 
       // Save the token in a cookie
-      Cookies.set('token', token, {
+      Cookies.set('authtoken', token, {
         httpOnly: true, // This would prevent JS from reading it, but can't be set from frontend directly
-        secure: process.env.NODE_ENV === 'production',
+        secure: true,
         sameSite: 'Strict',
         expires: 1 // 1 day
       });
