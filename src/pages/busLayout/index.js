@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import styles from "./BusSeatingLayout.module.css"; // Import the CSS module
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { URL } from "../hostname";
 
 const BusLayout = () => {
   const totalSeats = 13; // Define total seats
@@ -14,7 +15,7 @@ const BusLayout = () => {
   useEffect(() => {
     const fetchReservedSeats = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/get-seat"); // Adjust endpoint if needed
+        const response = await fetch(`${URL}/api/get-seat`); // Adjust endpoint if needed
         if (!response.ok) {
           throw new Error("Failed to fetch seat data");
         }
