@@ -1,18 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/busLayout": "pages/busLayout.js",
-  "/contact": "pages/contact.js",
-  "/footer": "pages/footer.js",
-  "/hero": "pages/hero.js",
-  "/home": "pages/home.js",
-  "/admin-login": "pages/admin-login.js",
-  "/login": "pages/login.js",
-  "/seatReservation": "pages/seatReservation.js",
-  "/header": "pages/header.js",
-  "/signup": "pages/signup.js",
-  "/termsAndCondition": "pages/termsAndCondition.js",
-  "/service": "pages/service.js",
-  "/hostname": "pages/hostname.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/busLayout": "pages/busLayout.js"
 }

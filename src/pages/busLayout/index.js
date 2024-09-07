@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import styles from "./BusSeatingLayout.module.css"; // Import the CSS module
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { URL } from "../../../config.js";
+import Header from "../header";
 
 const BusLayout = () => {
   const totalSeats = 13; // Define total seats
@@ -33,7 +34,8 @@ const BusLayout = () => {
   // Render seats based on their status
   const renderSeats = () => {
     const layout = [
-      [1, 2,null, null],
+      
+      [1, 2,null, "Driver"],
       [3, 4, 5, 6],
       [7, null, 8, 9],
       [10, 11, 12, 13], 
@@ -62,23 +64,27 @@ const BusLayout = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className={styles.busLayout}>
       <h1>Bus Seating Layout</h1>
       {error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : (
         <div className={styles.busBody}>
-          <div className={styles.driverArea}>
+          {/* <div className={styles.driverArea}>
             <i
               className="fa-solid fa-circle-xmark fa-3x"
               style={{ color: "black" }}
             ></i>{" "}
             {/* Steering Wheel */}
-          </div>
-          <div className={styles.seatingGrid}>{renderSeats()}</div>
+          {/* </div> */}
+          <div className={styles.seatingGrid}>{renderSeats()}</div> 
         </div>
+        
       )}
     </div>
+    </>
   );
 };
 

@@ -35,11 +35,11 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li><a href="/">HOME</a></li>
-            <li><a href="#service">VEHICLES & SERVICES</a></li>
+            <li><a href="#service">SERVICE</a></li>
             {/* <li><a href="#">VEHICLES</a></li> */}
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            {/* <li><a href="#">BLOG</a></li> */}
+            <li><a href="#contact">CONTACT US</a></li>
             <li><a href="#">+91-8877XXXXXX</a></li>
            
           </ul>
@@ -53,13 +53,10 @@ const Header = () => {
           </Link>
         </div>
 
-    
 
-
-
-        <div className={styles.searchIcon}>
+        {/* <div className={styles.searchIcon}>
           <i className="fas fa-search"></i>
-        </div>
+        </div> */}
       </div>
     </header>
   );

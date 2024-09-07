@@ -23,21 +23,19 @@ const ContactForm = () => {
       </div>
       <form className={styles.contactForm} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <label className={styles.label}>Name</label>
           <input
             type="text"
             className={styles.inputField}
             value={name}
-            placeholder='enter your name'
+            placeholder='Enter your name'
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
         <div className={styles.formRow}>
-          <label className={styles.label}>Subject</label>
           <input
             type="text"
-            placeholder='enter your subject'
+            placeholder='Enter your subject'
             className={styles.inputField}
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
@@ -45,10 +43,9 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.formRow}>
-          <label className={styles.label}>Email</label>
           <input
             type="email"
-              placeholder='enter your email'
+            placeholder='Enter your email'
             className={styles.inputField}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -56,10 +53,9 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.formRow}>
-          <label className={styles.label}>Phone</label>
           <input
             type="number"
-              placeholder='enter your 10 digit phone number'
+            placeholder='Enter your phone number'
             className={styles.inputField}
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -67,10 +63,9 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.formRow}>
-          <label className={styles.label}>Message</label>
           <textarea
             className={styles.messageArea}
-              placeholder='type your message...'
+            placeholder='Type your message...'
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
