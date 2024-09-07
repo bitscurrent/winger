@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import styles from "./BusSeatingLayout.module.css"; // Import the CSS module
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { URL } from "../hostname";
+import { URL } from "../hostname.js";
 
 const BusLayout = () => {
   const totalSeats = 13; // Define total seats
