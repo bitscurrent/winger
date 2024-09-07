@@ -7,6 +7,7 @@ import Cookies from 'js-cookie'; // Import js-cookie for managing cookies
 import styles from './Login.module.css'; // Import the CSS module
 import Header from '../header';
 import Link from 'next/link'; 
+import { URL } from '../../../config.js';
 
 const Login = () => {
   const [email, setEmail] = useState(''); // Changed from username to email.
@@ -19,7 +20,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', { email, password });
+      const response = await axios.post(`${URL}/api/auth/login`, { email, password });
       const { token } = response.data;
 
       // Save the token in a cookie

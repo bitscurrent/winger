@@ -7,6 +7,7 @@ import axios from 'axios';
 import styles from './Signup.module.css'; // Import the CSS module
 import Header from '../header';
 import Link from 'next/link'; // Import Link for navigation
+import { URL } from '../../../config.js';
 
 const Signup = () => {
   const [fullName, setFullName] = useState('');
@@ -22,7 +23,7 @@ const Signup = () => {
 
     try {
       // Send fullName, email, phone, and password to the backend
-      const response = await axios.post('http://localhost:3000/api/auth/signup', {
+      const response = await axios.post(`${URL}/api/auth/signup`, {
         fullName,
         email,
         phone,
