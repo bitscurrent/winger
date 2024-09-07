@@ -35,13 +35,13 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li><a href="/">HOME</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">VEHICLES</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#service">VEHICLES & SERVICES</a></li>
+            {/* <li><a href="#">VEHICLES</a></li> */}
+            <li><a href="#about">ABOUT</a></li>
             <li><a href="#">BLOG</a></li>
             <li><a href="#contact">CONTACT</a></li>
-            <li><a href="#">COMING-SOON</a></li>
-            <li><a href="#">404</a></li>
+            <li><a href="#">+91-8877XXXXXX</a></li>
+           
           </ul>
         </nav>
 

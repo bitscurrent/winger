@@ -1,0 +1,60 @@
+
+.container {
+    position: relative;
+    /* width: 100%; */
+    height: 80vh; /* Fullscreen */
+    /* overflow: hidden; */
+  }
+  
+  .slider {
+    display: flex;
+    width: 200%; /* Two images */
+    height: 90%; /* Full height for the slider */
+    animation: scroll 10s linear infinite;
+  }
+  
+  .image {
+    width: 50%; /* Each image takes half the width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* To position the overlay text */
+  }
+  
+  .overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    z-index: 2; /* Ensure it is above any image layers */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Make the text stand out */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  
+  /* Keyframe for auto-scrolling */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
