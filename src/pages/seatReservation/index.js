@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './seatReservation.module.css';
+import Link from 'next/link';
 
 const SeatReservation = () => {
   return (
@@ -46,9 +47,13 @@ const SeatReservation = () => {
             <input type="checkbox" id="return" />
             <label htmlFor="return">Return to the same location</label>
           </div>
-          <button className={styles.findButton} type="submit">
-            Find a Car
-          </button>
+        
+          <Link href="/busLayout">
+      
+              Find a Seat
+          
+          </Link>
+
         </div>
       </form>
     </section>

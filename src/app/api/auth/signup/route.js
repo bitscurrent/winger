@@ -8,9 +8,6 @@ import User from '../../../models/user.model.js';
 import dbConnect from '../../../database/db.js';
 
 
-// Connect to the database
-dbConnect()
-
 export async function POST(req) {
   // Connect to the database
   await dbConnect()

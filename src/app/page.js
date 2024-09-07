@@ -9,14 +9,13 @@ import SeatReservation from "../pages/seatReservation";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Login from "../pages/login";
+import BusSeatingLayout from "../pages/busLayout";
 
 
 export default function Home() {
   return (
     <>
 
-    
- 
      <Header />
     <HeroSection />
     <SeatReservation />

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.topBar}>
+      {/* <div className={styles.topBar}>
         <span>The Guide</span>
         <span>/ Our Crew</span>
         <span>/ Become a Partner</span>
@@ -26,7 +26,7 @@ const Header = () => {
           </select>
         </div>
         <a href="/admin" className={styles.login}>Admin Login</a>
-      </div>
+      </div> */}
 
       <div className={styles.navBar}>
         <div className={styles.logo}>

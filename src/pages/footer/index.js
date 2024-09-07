@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './footer.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -17,7 +18,19 @@ const Footer = () => {
       </div>
       <div className={styles.copyright}>
         &copy; 2024 Karko Tours and Travels. All rights reserved.
+      
       </div>
+      <div className={styles.adminContainer}>
+      
+        <Link href="/admin-login">
+
+        Admin
+      {" "}
+      <i className="fa-solid fa-user-tie"></i>
+        </Link>
+   
+      </div>
+
     </footer>
   );
 }

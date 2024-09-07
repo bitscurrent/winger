@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState } from 'react';
@@ -8,10 +6,10 @@ import axios from 'axios';
 import Cookies from 'js-cookie'; // Import js-cookie for managing cookies
 import styles from './Login.module.css'; // Import the CSS module
 import Header from '../header';
-import Link from 'next/link'; // Import Link for navigation
+import Link from 'next/link'; 
 
 const Login = () => {
-  const [email, setEmail] = useState(''); // Changed from username to email
+  const [email, setEmail] = useState(''); // Changed from username to email.
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
@@ -26,18 +24,18 @@ const Login = () => {
 
       // Save the token in a cookie
       Cookies.set('authtoken', token, {
-        httpOnly: true, // This would prevent JS from reading it, but can't be set from frontend directly
+        httpOnly: true,
         secure: true,
         sameSite: 'Strict',
-        expires: 1 // 1 day
+        expires: 1,
       });
-
+      
       // Redirect to the home page after login
       router.push('/');
     } catch (err) {
       setError('Invalid email or password');
     }
-  };
+  }
 
   return (
     <>
