@@ -1,62 +1,59 @@
-import React from 'react';
+
+
+"use client"
+
+import React, { useState } from 'react';
 import styles from './header.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Link from 'next/link';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };        
+
   return (
     <header className={styles.header}>
-      {/* <div className={styles.topBar}>
-        <span>The Guide</span>
-        <span>/ Our Crew</span>
-        <span>/ Become a Partner</span>
-        <span>/ +8 800 12 34 567</span>
-        <span>/ mail@letsdrive.com</span>
-        <div className={styles.socialLinks}>
-          <i className="fab fa-twitter"></i>
-          <i className="fab fa-instagram"></i>
-          <i className="fab fa-google-plus-g"></i>
-          <i className="fab fa-youtube"></i>
-          <i className="fab fa-vk"></i>
-        </div>
-        <div className={styles.language}>
-          <select>
-            <option value="en">EN</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <a href="/admin" className={styles.login}>Admin Login</a>
-      </div> */}
-
       <div className={styles.navBar}>
-        <div className={styles.logo}>
-          <h1>Karko <span>Tours and Travels</span></h1>
+        <div className={styles.inlineContainer}>
+          <div className={styles.logo}>
+            <h1>Karko <span>Tours and Travels</span></h1>
+          </div>
+
+          <i
+            className={`fa-solid fa-bars ${styles.menuIcon}`}
+            onClick={toggleMenu}
+          ></i>
         </div>
-        <nav className={styles.nav}>
+
+        <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
           <ul className={styles.navList}>
             <li><a href="/">HOME</a></li>
             <li><a href="#service">SERVICE</a></li>
-            {/* <li><a href="#">VEHICLES</a></li> */}
             <li><a href="#about">ABOUT</a></li>
-            {/* <li><a href="#">BLOG</a></li> */}
             <li><a href="#contact">CONTACT US</a></li>
             <li><a href="#">+91-8877XXXXXX</a></li>
-           
-          </ul>
-        </nav>
 
 
-        <div className="userIcon">
+<li>
+
+
+            <div className={styles.userIcon}>
           <Link href='/login'>
-          <i className="fa-solid fa-user"></i>
-
+            <i className="fa-solid fa-user"></i>
           </Link>
         </div>
+        </li>
+
+          </ul>
 
 
-        {/* <div className={styles.searchIcon}>
-          <i className="fas fa-search"></i>
-        </div> */}
+         
+
+        </nav>
+
       </div>
     </header>
   );

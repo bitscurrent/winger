@@ -1,60 +1,68 @@
+
 .contactForm {
-    width: 50%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the form horizontally */
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 20px;
-    border-radius: 8px;
-    gap: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
-  }
-  
-  .formRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px; /* Space between rows */
-  }
-  
-  .label {
-    flex: 1;
-    font-weight: bold;
-  }
-  
-  .inputField, .messageArea {
-    flex: 2;
-    padding: 8px;
-    border: 1px solid #555; /* Dark border color */
-    border-radius: 4px;
-    background-color: #444; /* Slightly lighter dark background */
-    color: #fff; /* White text color */
-  }
-  
-  .messageArea {
-    height: 100px; /* Set height for the message area */
-    resize: vertical; /* Allow vertical resizing */
-  }
-  
-  .submitButton {
-    background-color: #007BFF; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%; 
-  }
-  
-  .submitButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .titleContact {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff; /* White text color */
-  }
-  
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.inputField, .messageArea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.inputField:focus, .messageArea:focus {
+  background-color: #555;
+  outline: none;
+}
+
+.messageArea {
+  height: 120px; 
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.titleContact {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.titleContact p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ccc;
+}

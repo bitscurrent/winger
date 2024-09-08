@@ -324,37 +324,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header_topBar__bu_Wl {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 30px;
-  background-color: #f8f8f8;
-  font-size: 12px;
-  color: #666;
-}
-
-.header_socialLinks__ocUP0 i {
-  margin-left: 15px;
-  cursor: pointer;
-}
-
-.header_language__mFtke {
-  margin-left: 20px;
-}
-
-.header_language__mFtke select {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.header_login__m4lNb {
-  margin-left: 20px;
-  color: #a17e66;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .header_navBar__PEXGP {
   display: flex;
   justify-content: space-between;
@@ -394,13 +363,23 @@
   font-weight: bold;
 }
 
-.header_searchIcon__26GVx i {
-  font-size: 16px;
-  color: #a17e66;
+.header_menuIcon__dCJqN {
+  display: none; /* Hidden on larger screens */
+  font-size: 24px;
   cursor: pointer;
 }
 
-/* Responsive styles for small screen sizes */
+.header_userIcon__PJDCb {
+  display: block;
+}
+
+/* Inline container for logo and menu */
+.header_inlineContainer__W2dos {
+  display: flex;
+  align-items: center;
+}
+
+/* Media query for small screens */
 @media (max-width: 768px) {
   .header_topBar__bu_Wl {
     flex-direction: column;
@@ -410,40 +389,67 @@
   }
 
   .header_navBar__PEXGP {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-
-  .header_logo__YT_Cy h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .header_nav___yUHu {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
     width: 100%;
+  }
+
+ 
+  .header_inlineContainer__W2dos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Hide the navigation by default on small screens */
+  .header_nav___yUHu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1; 
+    width: 100%;
+    padding: 20px;
+  }
+
+  .header_nav___yUHu.header_active__dE5F9 {
+    display: flex;
   }
 
   .header_navList__2BYhD {
     flex-direction: column;
     width: 100%;
+    gap: 15px;
   }
 
   .header_navList__2BYhD li {
     margin: 10px 0;
+    color: #000;
   }
 
   .header_navList__2BYhD li a {
+    color: #ffffff;
     font-size: 14px;
+    color: #000;
   }
+
+  /* Show the menu icon on small screens */
+  .header_menuIcon__dCJqN {
+    display: block;
+  }
+/* 
+  .userIcon {
+    display: none;
+  } */
 
   .header_searchIcon__26GVx i {
     font-size: 14px;
   }
 }
 
+/* Responsive styles for screens 480px and smaller */
 @media (max-width: 480px) {
   .header_topBar__bu_Wl {
     font-size: 9px;
@@ -458,6 +464,10 @@
     font-size: 16px;
   }
 
+  .header_navList__2BYhD li {
+    margin: 5px 0;
+  }
+
   .header_navList__2BYhD li a {
     font-size: 12px;
   }
@@ -465,75 +475,80 @@
   .header_searchIcon__26GVx i {
     font-size: 12px;
   }
-
-  .header_navList__2BYhD li {
-    margin: 5px 0;
-  }
 }
 
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/contact/contact.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
+
 .contact_contactForm__xPfkH {
-    width: 50%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the form horizontally */
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 20px;
-    border-radius: 8px;
-    gap: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
-  }
-  
-  .contact_formRow__ZOjUq {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px; /* Space between rows */
-  }
-  
-  .contact_label__N1u3I {
-    flex: 1 1;
-    font-weight: bold;
-  }
-  
-  .contact_inputField__YmcCV, .contact_messageArea__6LEYm {
-    flex: 2 1;
-    padding: 8px;
-    border: 1px solid #555; /* Dark border color */
-    border-radius: 4px;
-    background-color: #444; /* Slightly lighter dark background */
-    color: #fff; /* White text color */
-  }
-  
-  .contact_messageArea__6LEYm {
-    height: 100px; /* Set height for the message area */
-    resize: vertical; /* Allow vertical resizing */
-  }
-  
-  .contact_submitButton__WkMS5 {
-    background-color: #007BFF; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%; 
-  }
-  
-  .contact_submitButton__WkMS5:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact_titleContact__vrwyX {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff; /* White text color */
-  }
-  
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.contact_formRow__ZOjUq {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.contact_inputField__YmcCV, .contact_messageArea__6LEYm {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact_inputField__YmcCV:focus, .contact_messageArea__6LEYm:focus {
+  background-color: #555;
+  outline: none;
+}
+
+.contact_messageArea__6LEYm {
+  height: 120px; 
+  resize: vertical;
+}
+
+.contact_submitButton__WkMS5 {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact_submitButton__WkMS5:hover {
+  background-color: #0056b3;
+}
+
+.contact_titleContact__vrwyX {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.contact_titleContact__vrwyX p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ccc;
+}
+
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/footer/footer.module.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/

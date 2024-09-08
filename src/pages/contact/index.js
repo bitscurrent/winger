@@ -13,13 +13,14 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic
+    // Handle form submission logic here
   };
 
   return (
     <>
-      <div className={styles.titleContact} id='contact'> 
-        Contact Us
+      <div className={styles.titleContact} id='contact'>
+        Have Questions? We're Here to Help!
+        <p>Reach out to us for any inquiries or assistance. We're just a message away.</p>
       </div>
       <form className={styles.contactForm} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
@@ -27,7 +28,7 @@ const ContactForm = () => {
             type="text"
             className={styles.inputField}
             value={name}
-            placeholder='Enter your name'
+            placeholder='Your Name'
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -35,9 +36,9 @@ const ContactForm = () => {
         <div className={styles.formRow}>
           <input
             type="text"
-            placeholder='Enter your subject'
             className={styles.inputField}
             value={subject}
+            placeholder='Subject'
             onChange={(e) => setSubject(e.target.value)}
           />
         </div>
@@ -45,19 +46,19 @@ const ContactForm = () => {
         <div className={styles.formRow}>
           <input
             type="email"
-            placeholder='Enter your email'
             className={styles.inputField}
             value={email}
+            placeholder='Your Email'
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
         <div className={styles.formRow}>
           <input
-            type="number"
-            placeholder='Enter your phone number'
+            type="tel"
             className={styles.inputField}
             value={phone}
+            placeholder='Phone Number'
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>
@@ -65,16 +66,16 @@ const ContactForm = () => {
         <div className={styles.formRow}>
           <textarea
             className={styles.messageArea}
-            placeholder='Type your message...'
             value={message}
+            placeholder='Your Message...'
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
         
-        <button type="submit" className={styles.submitButton}>SEND A MESSAGE</button>
+        <button type="submit" className={styles.submitButton}>SEND MESSAGE</button>
       </form>
     </>
   );
-}
+};
 
 export default ContactForm;
