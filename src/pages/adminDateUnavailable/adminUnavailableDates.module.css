@@ -1,0 +1,91 @@
+/* Container */
+.adminContainer {
+    padding: 20px;
+  }
+  
+  /* Headings */
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .subHeading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Current unavailable dates list */
+  .currentUnavailable {
+    margin-bottom: 20px;
+  }
+  
+  .dateList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+
+  
+  /* Date picker styling */
+  .datePickerContainer {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .datePicker {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  /* Submit button */
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #555;
+  }
+  
+  /* Success message */
+  .message {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  
+
+  
+  .dateAndCancelContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Ensure padding surrounds the entire container */
+    margin: 5px 0;
+    background-color: #ffcccc; /* Apply the background color to the entire row */
+    border-radius: 5px; /* Rounds the corners of the entire row */
+  }
+  
+  .dateItem {
+    font-weight: bold;
+  }
+  
+  .cancelButton {
+    border: none;
+    background-color: transparent; /* Remove button background */
+    color: rgb(236, 8, 8); /* Button color */
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  

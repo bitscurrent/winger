@@ -35,7 +35,7 @@ const Adminlogin = () => {
       setIsLoggedIn(true);
       
       // Redirect to the bus layout page
-      router.push('/busLayout');
+      router.push('/adminDashboard');
     } catch (err) {
       setError('Invalid email or password');
     }

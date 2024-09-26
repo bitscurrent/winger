@@ -34,7 +34,7 @@ const Header = () => {
             <li><a href="#service">SERVICE</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT US</a></li>
-            <li><a href="#">+91-8877XXXXXX</a></li>
+            <li><a href="#">+91-99xxxxxxx</a></li>
 
 
 <li>

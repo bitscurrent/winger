@@ -1,0 +1,106 @@
+.busLayout {
+    color: #000;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .busBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .driverArea {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .seatingGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0;
+  }
+  
+  .seat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  
+  .emptySpace {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  
+  .reserved {
+    background-color: #ff4c4c; /* Red for reserved seats */
+  }
+  
+  .available {
+    background-color: #4caf50; /* Green for available seats */
+  }
+  
+
+  .seatButton {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50; /* Green for available */
+    color: white;
+    border-radius: 3px;
+  }
+  
+  .reserved .seatButton {
+    background-color: #f44336; /* Red for reserved */
+  }
+  
+
+
+  .routeSelection {
+    display: flex;
+    justify-content: space-around; /* Aligns the radio buttons on both sides */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .routeLabel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .routeOption {
+    margin-left: 8px; /* Space between radio button and label */
+  }
+  
+  /* .busLayout {
+    background-size: cover;
+    background-position: center;
+    background-image: url('/images.png'), url('/travellers.png');
+
+  } */

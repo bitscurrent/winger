@@ -5,6 +5,10 @@
     height: 80vh; /* Fullscreen */
     /* overflow: hidden; */
   }
+
+  .title{
+    font-size: 1.5rem;
+  }
   
   .slider {
     display: flex;

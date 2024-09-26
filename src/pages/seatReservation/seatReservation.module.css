@@ -89,3 +89,8 @@
     background-color: #e5b97c;
   }
   
+
+  .error {
+    color: red;
+    margin-top: 10px;
+  }

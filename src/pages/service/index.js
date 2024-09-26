@@ -42,7 +42,7 @@ const Service = () => {
 
   return (
     <div className={styles.container} id="service">
-       <div>
+       <div className={styles.title}>
         Our Buses and Services
        </div>
       <div className={styles.slider} ref={sliderRef}>
