@@ -1,3 +1,5 @@
+
+
 import LikabaliToItanagar from "../../models/lkbToitn.js";
 import dbConnect from "../../database/db.js";
 import { NextResponse } from 'next/server';
@@ -23,10 +25,13 @@ export async function POST(req) {
 
     // If no seat details are found
     if (!seatDetails || seatDetails.length === 0) {
-      return NextResponse.json({ message: "No seats found for the selected route and date" }, { status: 404 });
+      return NextResponse.json(
+        { message: "No reservation is made, so pick your best seat" },
+        { status: 200 }  // 200 OK status with custom message
+      );
     }
 
-    // Return seat details in the response
+    // Return seat details in the response if they exist
     return NextResponse.json(seatDetails, { status: 200 });
 
   } catch (error) {

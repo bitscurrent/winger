@@ -18,10 +18,16 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.navBar}>
         <div className={styles.inlineContainer}>
-          <div className={styles.logo}>
-            <h1>Karko <span>Tours and Travels</span></h1>
-          </div>
+        
 
+
+<div className={styles.logo}>
+  <Link href="/" passHref>
+    <h1 style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+      Karko <span>Tours and Travels</span>
+    </h1>
+  </Link>
+</div>
           <i
             className={`fa-solid fa-bars ${styles.menuIcon}`}
             onClick={toggleMenu}

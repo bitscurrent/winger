@@ -1,16 +1,15 @@
-
 "use client"
 
-import React, { useEffect, useRef } from 'react';
-import styles from './Service.module.css';
+import React, { useEffect, useRef } from 'react'
+import styles from './Service.module.css'
 
-const image1 = "/winger-13-seater.jpg"; // Assuming images are in the public folder
-const image2 = "/winger-side-image.png";
-const image3 = "/travellers.png";
+const image1 = "/winger-13-seater.jpg" 
+const image2 = "/winger-side-image.png"
+const image3 = "/travellers.png"
 
 
 const Service = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef(null)
 
   // Function to stop the auto-scroll animation when buttons are clicked
   const stopAutoScroll = () => {
@@ -59,12 +58,10 @@ const Service = () => {
         </section>
       </div>
       
-      {/* Left Arrow Button */}
       <button className={`${styles.arrow} ${styles.left}`} onClick={() => handleScroll('left')}>
         &#8592;
       </button>
 
-      {/* Right Arrow Button */}
       <button className={`${styles.arrow} ${styles.right}`} onClick={() => handleScroll('right')}>
         &#8594;
       </button>

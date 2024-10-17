@@ -1,0 +1,90 @@
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    background-color: #fff;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #555;
+}
+
+.table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.tableRow:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tableCell {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .tableRow {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .tableCell {
+        display: block;
+        text-align: right;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+    .tableCell:before {
+        content: attr(data-label); /* Display the label for each data cell */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .tableCell[data-label="Day"] {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .tableRow {
+        background-color: #fff;
+    }
+}

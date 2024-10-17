@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Login from "../pages/login";
 import BusSeatingLayout from "../pages/busLayout";
 import Service from "../pages/service";
+import Timings from "../pages/timings";
 
 
 export default function Home() {
@@ -20,6 +21,8 @@ export default function Home() {
      <Header />
     <HeroSection />
     <SeatReservation />
+    <Timings />
+
     <Service />
 <Contact />
 <Footer />

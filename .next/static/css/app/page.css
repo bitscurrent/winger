@@ -563,6 +563,7 @@
   align-items: center;
   gap: 15px;
   position: relative;
+  margin-top: 20px;
 }
 
 .footer_footerLinks__3F4Sq {
@@ -812,101 +813,92 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/seatReservation/seatReservation.module.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************/
 .seatReservation_carReservation__IM68A {
-    background-color: #4a2e1c;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  .seatReservation_header__9R6T3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .seatReservation_header__9R6T3 h2 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .seatReservation_options__2WFlt a {
-    margin-right: 15px;
-    color: #d9ab74;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .seatReservation_available__qUZPQ {
-    color: #ffd700;
-    font-size: 14px;
-  }
-  
-  .seatReservation_form__Ywa_S {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .seatReservation_row__aLZyX {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  
-  .seatReservation_column__oyZ1M {
-    flex: 1 1;
-    margin-right: 10px;
-  }
-  
-  .seatReservation_column__oyZ1M:last-child {
-    margin-right: 0;
-  }
-  
-  .seatReservation_column__oyZ1M label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  
-  .seatReservation_column__oyZ1M input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    background-color: #6b4a33;
-    color: white;
-  }
-  
-  .seatReservation_checkbox__j2o8X {
-    display: flex;
-    align-items: center;
-  }
-  
-  .seatReservation_checkbox__j2o8X input {
-    margin-right: 10px;
-  }
-  
-  .seatReservation_findButton__iMa_R {
-    background-color: #d9ab74;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  .seatReservation_findButton__iMa_R:hover {
-    background-color: #e5b97c;
-  }
-  
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  max-width: 756px; 
 
-  .seatReservation_error__Axrgs {
-    color: red;
-    margin-top: 10px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.seatReservation_header__9R6T3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seatReservation_header__9R6T3 h2 {
+  font-size: 28px;
+  color: #007BFF;
+  margin-bottom: 5px;
+}
+
+.seatReservation_form__Ywa_S {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.seatReservation_row__aLZyX {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.seatReservation_column__oyZ1M {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.seatReservation_column__oyZ1M label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.seatReservation_column__oyZ1M input, .seatReservation_column__oyZ1M .seatReservation_react-datepicker-wrapper__u6RAf input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.seatReservation_column__oyZ1M input:focus, .seatReservation_column__oyZ1M .seatReservation_react-datepicker-wrapper__u6RAf input:focus {
+  border-color: #007BFF;
+}
+
+.seatReservation_findSeatButton__1h9wL {
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.seatReservation_findSeatButton__1h9wL:hover {
+  background-color: #0056b3;
+}
+
+.seatReservation_error__Axrgs {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+@media (max-width: 768px) {
+  .seatReservation_row__aLZyX {
+      flex-direction: column;
+      gap: 15px;
   }
+}
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/react-datepicker/dist/react-datepicker.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -1749,3 +1741,97 @@ h2.react-datepicker__current-month {
     100% { transform: translateX(-50%); }
   }
   
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/timings/Timing.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+
+
+.Timing_container__ZfULJ {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Timing_heading__qvG0u {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.Timing_table__kDJZK {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    background-color: #fff;
+}
+
+.Timing_table__kDJZK th, .Timing_table__kDJZK td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #555;
+}
+
+.Timing_table__kDJZK th {
+    background-color: #333;
+    color: #fff;
+}
+
+.Timing_tableRow__J_ku2:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.Timing_tableCell__ZWlJF {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .Timing_table__kDJZK thead {
+        display: none;
+    }
+
+    .Timing_tableRow__J_ku2 {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .Timing_tableCell__ZWlJF {
+        display: block;
+        text-align: right;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+    .Timing_tableCell__ZWlJF:before {
+        content: attr(data-label); /* Display the label for each data cell */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .Timing_tableCell__ZWlJF[data-label="Day"] {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .Timing_tableRow__J_ku2 {
+        background-color: #fff;
+    }
+}
+
