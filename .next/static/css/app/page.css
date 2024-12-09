@@ -809,6 +809,35 @@
     text-decoration: underline;
   }
   
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/marquee/Marquee.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+
+.Marquee_marqueeContainer__sgfbG {
+    position: relative;
+    width: 100%;
+    color: rgb(245, 245, 9);
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: rgba(87, 73, 73, 0.5); /* Optional */
+    z-index: 1;
+}
+
+.Marquee_marqueeText__T2oKn {
+    display: inline-block;
+    animation: Marquee_marquee-left__ytgEh 20s linear infinite; /* Slow scrolling 20s, to move faster lower the time*/
+    font-size: 24px; 
+}
+
+@keyframes Marquee_marquee-left__ytgEh {
+    0% {
+        transform: translateX(25%); /* Start just inside the container (no delay) */
+    }
+    100% {
+        transform: translateX(-100%); /* Move completely out to the left */
+    }
+}
+
 /*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/pages/seatReservation/seatReservation.module.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************/

@@ -154,8 +154,8 @@ const SeatReservation = () => {
               <DatePicker
                 selected={selectedDate}
                 onChange={handleDateChange}
-                // minDate={today}
-                // filterDate={(date) => !isDateUnavailable(date) && date >= today}
+                minDate={today}
+                filterDate={(date) => !isDateUnavailable(date) && date >= today}
                 placeholderText="Depart"
                 maxDate={new Date(new Date().setDate(today.getDate() + 7))}
               />

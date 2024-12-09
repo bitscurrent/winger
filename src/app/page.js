@@ -12,6 +12,7 @@ import Login from "../pages/login";
 import BusSeatingLayout from "../pages/busLayout";
 import Service from "../pages/service";
 import Timings from "../pages/timings";
+import Marquee from "../pages/marquee";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
     <>
 
      <Header />
+     <Marquee />
     <HeroSection />
     <SeatReservation />
     <Timings />

@@ -1,4 +1,5 @@
 {
+  "/page": "app/page.js",
   "/api/unavailable-date/route": "app/api/unavailable-date/route.js",
-  "/page": "app/page.js"
+  "/api/get-seat-by-route-date/route": "app/api/get-seat-by-route-date/route.js"
 }
