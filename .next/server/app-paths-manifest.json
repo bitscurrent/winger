@@ -1,5 +1,5 @@
 {
   "/page": "app/page.js",
   "/api/unavailable-date/route": "app/api/unavailable-date/route.js",
-  "/api/get-seat-by-route-date/route": "app/api/get-seat-by-route-date/route.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

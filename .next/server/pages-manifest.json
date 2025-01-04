@@ -1,10 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/adminDashboard": "pages/adminDashboard.js",
-  "/login": "pages/login.js",
-  "/signup": "pages/signup.js",
-  "/admin-login": "pages/admin-login.js",
-  "/busLayout": "pages/busLayout.js"
-}
+{}
