@@ -42,6 +42,7 @@ const AdminBooking = () => {
         window.alert("Hi Admin, reserve freshly");
         setReservedSeats([]);
         return;
+
       }
       const data = await response.json();
 
@@ -54,12 +55,15 @@ const AdminBooking = () => {
       }
     } catch (error) {
       console.error("Error fetching seat data:", error);
-      setError("Failed to fetch seat data. Please try again later.");
+      // setError("Failed to fetch seat data. Please try again later.");
       setReservedSeats([]); // Reset reserved seats on error
+      setSeatsVisible(true); // Ensure seats are displayed on error
+
     }
   };
 
   // Fetch unavailable dates from the backend
+
   const fetchUnavailableDates = async () => {
     try {
       const response = await fetch(`${URL}/api/unavailable-date`);

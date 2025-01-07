@@ -26,7 +26,7 @@ const BookingModal = ({ show, onClose, onSubmit, seatNumber }) => {
               className={styles.inputField}
               value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
-              required
+              
             />
           </div>
 
