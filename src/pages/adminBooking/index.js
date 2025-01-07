@@ -28,6 +28,7 @@ const AdminBooking = () => {
 
   // Fetch reserved seat data based on route and date
   const fetchReservedSeats = async (route, date) => {
+    console.log(route,"ttrrrr")
     try {
       setError(""); // Clear previous error
       const formattedDate = formatDateToUTC(date);
@@ -124,6 +125,7 @@ const AdminBooking = () => {
           notes,
           seatNumber: selectedSeat,
           date: formattedDate,
+          route,
         }),
       });
 
@@ -154,48 +156,65 @@ const AdminBooking = () => {
   const today = new Date();
 
   // Render seats based on their status
-  const renderSeats = () => {
-    const layout = [
-      [1, 2, null, "Driver"],
-      [3, 4, 5, 6],
-      [7, null, 8, 9],
-      [10, 11, 12, 13],
-    ];
+ 
+// Render seats based on their status
+const renderSeats = () => {
+  const layout = [
+    [1, 2, null, "Driver"],
+    [3, 4, 5, 6],
+    [7, null, 8, 9],
+    [10, 11, 12, 13],
+  ];
 
-    return layout.map((row, rowIndex) => (
-      <div key={rowIndex} className={styles.row}>
-        {row.map((seatNumber, seatIndex) => {
-          if (!seatNumber) {
-            return <div key={seatIndex} className={styles.emptySpace}></div>;
-          }
+  return layout.map((row, rowIndex) => (
+    <div key={rowIndex} className={styles.row}>
+      {row.map((seatNumber, seatIndex) => {
+        if (!seatNumber) {
+          return <div key={seatIndex} className={styles.emptySpace}></div>;
+        }
 
-          const isReserved =
-            seatNumber === "Driver" || reservedSeats.includes(seatNumber);
+        const isReserved =
+          seatNumber === "Driver" || reservedSeats.includes(seatNumber);
 
-          return (
-            <div
-              key={seatNumber}
-              className={`${styles.seat} ${
-                isReserved ? styles.reserved : styles.available
-              }`}
-            >
-              <i className="fa-solid fa-chair"></i>
-              <span>{seatNumber}</span>
+        return (
+          <div
+            key={seatNumber}
+            className={`${styles.seat} ${
+              isReserved ? styles.reserved : styles.available
+            }`}
+          >
+            <i className="fa-solid fa-chair"></i>
+            <span>{seatNumber}</span>
 
-              {seatNumber !== "Driver" && (
+            {seatNumber !== "Driver" && (
+              <div className={styles.seatActions}>
                 <button
                   className={styles.seatButton}
                   onClick={() => handleSeatAction(seatNumber)}
                 >
                   {isReserved ? "Reserved" : "Book"}
                 </button>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    ));
-  };
+
+                {isReserved && (
+                  <button
+                    className={styles.viewButton}
+                    onClick={() =>
+                      alert(`View details of seat ${seatNumber}`)
+                    }
+                  >
+                    <i className="fa-solid fa-eye"></i>
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  ));
+};
+
+
 
   const isDateUnavailable = (date) => {
     const formattedDate = formatDateToUTC(date);

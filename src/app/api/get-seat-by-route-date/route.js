@@ -3,6 +3,7 @@
 import LikabaliToItanagar from "../../models/lkbToitn.js";
 import dbConnect from "../../database/db.js";
 import { NextResponse } from 'next/server';
+import ItanagarToLikabali from "../../models/ItnTolkb.js";
 
 export async function POST(req) {
   try {
@@ -19,8 +20,8 @@ export async function POST(req) {
     let seatDetails;
     if (route === "LikabaliToItanagar") {
       seatDetails = await LikabaliToItanagar.find({ date: queryDate });  // Match date using the Date object
-    } else if (route === "ItanagarToLikabali") {
-      seatDetails = await LikabaliToItanagar.find({ date: queryDate });
+    } else {
+      seatDetails = await ItanagarToLikabali.find({ date: queryDate });
     }
 
     // If no seat details are found

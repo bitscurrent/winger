@@ -104,3 +104,17 @@
     background-image: url('/images.png'), url('/travellers.png');
 
   } */
+
+
+  
+  .viewButton {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .viewButton:hover {
+    color: #0056b3;
+  }
+  

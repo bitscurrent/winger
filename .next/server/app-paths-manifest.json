@@ -1,7 +1,6 @@
 {
-  "/page": "app/page.js",
   "/api/get-seat-by-route-date/route": "app/api/get-seat-by-route-date/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/unavailable-date/route": "app/api/unavailable-date/route.js",
-  "/api/admin/reserve-seat/route": "app/api/admin/reserve-seat/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/api/admin/reserve-seat/route": "app/api/admin/reserve-seat/route.js"
 }

@@ -8,8 +8,8 @@ const likabaliToItanagarSchema = new mongoose.Schema({
   seatNumber: {  type: Number, required: true },
   date: { type: Date},
   testField: {type: String},
-  notes:{type:String,required:true},
-  phone:{type:Number, required: true},
+  notes:{type: String, required: true},
+  phone:{type: Number, required: true},
   fullName :{type:String}
 
 
