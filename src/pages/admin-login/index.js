@@ -22,6 +22,7 @@ const Adminlogin = () => {
 
     try {
       const response = await axios.post(`${URL}/api/admin/auth/login`, { email, password });
+      console.log(URL,"url")
       const { token } = response.data;
 
       // Save the token in a cookie

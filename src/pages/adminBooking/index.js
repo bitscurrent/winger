@@ -63,6 +63,59 @@ const AdminBooking = () => {
     }
   };
 
+
+  const fetchSeatDetails = async (seatNumber, route, date) => {
+    const formattedDate = formatDateToUTC(date);
+    try {
+      const response = await fetch(`${URL}/api/admin/seat-details`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ seatNumber, route, date: formattedDate }),
+      });
+     
+      if (response.ok) {
+        const data = await response.json(); // Fetch the complete response as JSON
+        console.log("Full API Response:", data);
+      
+        // Extract fields from the nested 'seatDetails' object
+        const { fullName, phone, createdAt, notes, } = data.seatDetails; 
+      
+        return { fullName, phone, createdAt, notes }; // Return the specific field
+
+      } else {
+        throw new Error("Failed to fetch seat details");
+      }
+    } catch (error) {
+      console.error("Error fetching seat details:", error);
+      throw error;
+    }
+  };
+  
+  const cancelSeatReservation = async (seatNumber, route, date) => {
+    const formattedDate = formatDateToUTC(date);
+    try {
+      const response = await fetch(`${URL}/api/admin/cancel-reservation`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ seatNumber, route, date: formattedDate }),
+      });
+      if (response.ok) {
+        return await response.json();
+      } else {
+        throw new Error("Failed to cancel reservation");
+      }
+    } catch (error) {
+      console.error("Error canceling reservation:", error);
+      throw error;
+    }
+  };
+  
+
+
   // Fetch unavailable dates from the backend
 
   const fetchUnavailableDates = async () => {
@@ -143,6 +196,30 @@ const AdminBooking = () => {
     }
   };
 
+
+  const handleViewDetails = async (seatNumber) => {
+    try {
+      const seatDetails = await fetchSeatDetails(seatNumber, route, selectedDate);
+      alert(`Details for seat ${seatNumber}:\n${JSON.stringify(seatDetails, null, 2)}`);
+    } catch (error) {
+      alert("Failed to fetch seat details. Please try again later.");
+    }
+  };
+  
+  const handleCancelReservation = async (seatNumber) => {
+    if (window.confirm(`Are you sure you want to cancel the reservation for seat ${seatNumber}?`)) {
+      try {
+        await cancelSeatReservation(seatNumber, route, selectedDate);
+        alert(`Reservation for seat ${seatNumber} has been canceled.`);
+        setRefreshData(!refreshData); // Refresh seat data
+      } catch (error) {
+        alert("Failed to cancel reservation. Please try again later.");
+      }
+    }
+  };
+  
+
+
   // Function to handle route change
   const handleRouteChange = (selectedRoute) => {
     setRoute(selectedRoute);
@@ -196,15 +273,36 @@ const renderSeats = () => {
                 </button>
 
                 {isReserved && (
-                  <button
-                    className={styles.viewButton}
-                    onClick={() =>
-                      alert(`View details of seat ${seatNumber}`)
-                    }
-                  >
-                    <i className="fa-solid fa-eye"></i>
-                  </button>
-                )}
+  <div className={styles.actionButtons}>
+    <button
+      className={styles.viewButton}
+      onClick={() => handleViewDetails(seatNumber)}
+    >
+      <i className="fa-solid fa-eye"></i>
+    </button>
+   
+    <button
+  className={styles.cancelButton}
+  onClick={() => {
+    const confirmation = window.prompt(
+      `To cancel the reservation for seat ${seatNumber}, type "CONFIRM" and press OK.`
+    );
+    if (confirmation === "CONFIRM") {
+      handleCancelReservation(seatNumber); // Call the function to handle cancellation
+    } else {
+      alert("Cancellation not confirmed. Reservation remains active.");
+    }
+  }}
+>
+  <i className="fa-solid fa-xmark"></i>
+</button>
+
+
+
+  </div>
+)}
+
+               
               </div>
             )}
           </div>
